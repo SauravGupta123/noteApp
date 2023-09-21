@@ -3,7 +3,7 @@ import DisplayNote from './DisplayNote';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { collection, getDocs, addDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
-import { db } from '../firebase-config';
+import  db  from '../firebase-config';
 
 const Note = () => {
   const [notes, setNotes] = useState([])
