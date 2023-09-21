@@ -22,20 +22,44 @@ header{
 }
 
 .container{
-  max-width: 1000px;
-  margin: auto;
-  padding: 10px;
+  display:flex;
+  height:100vh;
+  
+
+  /* border-style: solid;
+  border-width: 5px;
+  border-color:blue; */
+}
+
+.formClass{
+  width:60%;
+  margin-right:10%;
+  height:85%;
+  margin-top:1rem;
+
+
 }
 
 form{
-  max-width: 500px;
+  width: 100%;
+  height:100%;
+  margin-left:80px;
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  margin: 10px auto;
+  margin-top: 10px;
+    /* border-style: solid;
+    border-width: 5px;
+    border-color:purple; */
 }
+
+textarea{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius:3px;
+}
+
 
 form input, textarea{
   outline: none;
@@ -50,34 +74,46 @@ form input{
   font-size: 20px;
 }
 
+.btn{
+  display:flex;
+ justify-content:space-evenly;
+}
+
 form button{
   background-color: rgb(255, 162, 0);
   color: #fff;
+  padding: 15px 15px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
   border: none;
   outline: none;
-  padding: 8px 15px;
-  margin: auto;
+
+  margin:1rem  auto;
   cursor: pointer;
 }
 
-.note-container{
+.note-container {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  height:100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 35%;
   justify-content: flex-start;
+  padding: 10px;
+  overflow: scroll;
 }
 
 .note{
   font-size: 14px;
   background-color: #fff;
   padding: 10px 13px;
+  width:100%;
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
   border-radius: 10px;
-  min-height: 70px;
-  margin: 10px auto;
-  width: 30%;
+  height: auto;
+  margin-top:10px;
+  
+
 }
 
 .outer-container{
@@ -105,6 +141,7 @@ button{
   outline: none;
   padding: 8px 15px;
   cursor: pointer;
+
 }
 
 @media screen and (max-width: 800px){

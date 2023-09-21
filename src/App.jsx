@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Note from './components/Note'
 import Preview from './components/Preview'
 
+
 function App() {
 
   return (
@@ -11,8 +12,7 @@ function App() {
       <Header/>
       <div className="outer-container">
         <Note/>
-
-        <Preview/>
+        
       </div>
 
     </div>
