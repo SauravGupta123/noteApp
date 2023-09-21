@@ -12,7 +12,6 @@ function App() {
       <div className="outer-container">
         <Note/>
 
-        <Preview/>
       </div>
 
     </div>

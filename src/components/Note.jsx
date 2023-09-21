@@ -74,21 +74,23 @@ const Note = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container ">
+     
+      <div className='note-container'>
+        {notes && notes.map((note) => (
+          <DisplayNote title={note.title} content={note.content} id={note.id} getId={deleteNote} getUpdateNoteId={updateNote} />
+        ))}
+      </div>
 
+      <div className="form">
       <form method='post' onSubmit={handleSubmit}>
         <input type="text" name="title" placeholder="Enter Title..." onChange={handleChange} value={addNote.title} required/>
-        <textarea name="content" placeholder='Type Content Here...' onChange={handleChange} value={addNote.content} rows="4" required></textarea>
+        <textarea name="content" placeholder='Type Content Here...' onChange={handleChange} value={addNote.content} rows="16" colums='80' required></textarea>
         <div style={{ "display": "flex" }}>
           <button type='submit' disabled={isSubmitting}>submit</button>
           <button style={{marginLeft: "10px",display: isEditing ? 'block' : 'none'}} type='button' onClick={()=>updatedNote(id)} >update</button>
         </div>
       </form>
-
-      <div className='note-container'>
-        {notes && notes.map((note) => (
-          <DisplayNote title={note.title} content={note.content} id={note.id} getId={deleteNote} getUpdateNoteId={updateNote} />
-        ))}
       </div>
     </div>
   )
