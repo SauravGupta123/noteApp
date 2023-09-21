@@ -1,19 +1,15 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
 
 import {getFirestore} from "firebase/firestore";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "firebase/app";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCtVY2hmJKLbRQZjP1t01AyOjkHCVR0IOU",
-  authDomain: "noteapp-acf28.firebaseapp.com",
-  projectId: "noteapp-acf28",
-  storageBucket: "noteapp-acf28.appspot.com",
-  messagingSenderId: "485980874185",
-  appId: "1:485980874185:web:dcec5985920b55cce3f418"
+  apiKey: "AIzaSyCGJ0RLNrifCf8n8aCWqjee-D51cfDuugw",
+  authDomain: "mynotesapp-eae5d.firebaseapp.com",
+  projectId: "mynotesapp-eae5d",
+  storageBucket: "mynotesapp-eae5d.appspot.com",
+  messagingSenderId: "100704111552",
+  appId: "1:100704111552:web:f7b51bc6a98290d23d1625"
 };
 
 // Initialize Firebase

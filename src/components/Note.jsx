@@ -82,11 +82,11 @@ const Note = () => {
         ))}
       </div>
 
-      <div className="form">
+      <div className="formClass">
       <form method='post' onSubmit={handleSubmit}>
         <input type="text" name="title" placeholder="Enter Title..." onChange={handleChange} value={addNote.title} required/>
-        <textarea name="content" placeholder='Type Content Here...' onChange={handleChange} value={addNote.content} rows="16" colums='80' required></textarea>
-        <div style={{ "display": "flex" }}>
+        <textarea name="content" placeholder='Type Content Here...' onChange={handleChange} value={addNote.content} rows="26" colums='80' required></textarea>
+        <div className='btn'>
           <button type='submit' disabled={isSubmitting}>submit</button>
           <button style={{marginLeft: "10px",display: isEditing ? 'block' : 'none'}} type='button' onClick={()=>updatedNote(id)} >update</button>
         </div>
