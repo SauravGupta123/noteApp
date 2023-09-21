@@ -10,6 +10,8 @@ const Note = () => {
   const [addNote, setAddNote] = useState({ title: "", content: "" })
   const [id, setId] = useState("")
   const [isEditing, setIsEditing] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
 
 
   const noteRef = collection(db, "note")
@@ -30,10 +32,22 @@ const Note = () => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    // console.log(addNote);
-    await addDoc(noteRef, addNote)
-  }
+    e.preventDefault();
+  
+    // Disable the submit button
+    setIsSubmitting(true);
+  
+    try {
+      await addDoc(noteRef, addNote);
+      // Clear the form after successful submission
+      setAddNote({ title: "", content: "" });
+    } catch (error) {
+      console.error("Error adding note:", error);
+    } finally {
+      // Enable the submit button
+      setIsSubmitting(false);
+    }
+  };
 
   const deleteNote = async (id) => {
     // console.log(id);
@@ -66,7 +80,7 @@ const Note = () => {
         <input type="text" name="title" placeholder="Enter Title..." onChange={handleChange} value={addNote.title} required/>
         <textarea name="content" placeholder='Type Content Here...' onChange={handleChange} value={addNote.content} rows="4" required></textarea>
         <div style={{ "display": "flex" }}>
-          <button type='submit'>submit</button>
+          <button type='submit' disabled={isSubmitting}>submit</button>
           <button style={{marginLeft: "10px",display: isEditing ? 'block' : 'none'}} type='button' onClick={()=>updatedNote(id)} >update</button>
         </div>
       </form>

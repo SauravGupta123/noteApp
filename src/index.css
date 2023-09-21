@@ -80,6 +80,13 @@ form button{
   width: 30%;
 }
 
+.outer-container{
+  display:flex;
+  flex-direction:column;
+
+
+}
+
 .note .title{
   color: rgb(255, 162, 0);
   font-size: 17px;
