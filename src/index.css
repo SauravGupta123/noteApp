@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&family=Poppins:wght@300&display=swap");
 
 body {
   margin: 0;
@@ -6,11 +6,11 @@ body {
   font-family: "Poppins";
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
-header{
+header {
   display: flex;
   background-color: rgb(255, 162, 0);
   color: #fff;
@@ -21,48 +21,45 @@ header{
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
 }
 
-.container{
-  display:flex;
-  height:100vh;
+.container {
+  display: flex;
+  height: 100vh;
   background-color: #1d1f26;
-  
 
   /* border-style: solid;
   border-width: 5px;
   border-color:blue; */
 }
 
-.formClass{
-  width:60%;
-  margin-right:10%;
-  height:85%;
-  margin-top:1rem;
-
-
+.formClass {
+  width: 60%;
+  margin-right: 10%;
+  height: 85%;
+  margin-top: 1rem;
 }
 
-form{
+form {
   width: 100%;
-  height:100%;
-  margin-left:80px;
+  height: 100%;
+  margin-left: 80px;
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-    /* border-style: solid;
+  /* border-style: solid;
     border-width: 5px;
     border-color:purple; */
 }
 
-textarea{
+textarea {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius:3px;
+  border-radius: 3px;
 }
 
-
-form input, textarea{
+form input,
+textarea {
   outline: none;
   border: none;
   padding: 8px;
@@ -71,16 +68,16 @@ form input, textarea{
   font-family: "Poppins";
 }
 
-form input{
+form input {
   font-size: 20px;
 }
 
-.btn{
-  display:flex;
- justify-content:space-evenly;
+.btn {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-form button{
+form button {
   background-color: rgb(255, 162, 0);
   color: #fff;
   padding: 15px 15px;
@@ -89,13 +86,13 @@ form button{
   border: none;
   outline: none;
 
-  margin:1rem  auto;
+  margin: 1rem auto;
   cursor: pointer;
 }
 
 .note-container {
   display: flex;
-  height:100%;
+  height: 100%;
   flex-direction: column;
   flex-wrap: nowrap;
   width: 35%;
@@ -104,36 +101,32 @@ form button{
   overflow: scroll;
 }
 
-.note{
+.note {
   font-size: 14px;
   background-color: #fff;
   padding: 10px 13px;
-  width:100%;
+  width: 100%;
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
   border-radius: 10px;
   height: auto;
-  margin-top:10px;
-  
-
+  margin-top: 10px;
 }
 
-.outer-container{
-  display:flex;
-  flex-direction:column;
-
-
+.outer-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.note .title{
+.note .title {
   color: rgb(255, 162, 0);
   font-size: 17px;
 }
 
-.note .content{
+.note .content {
   color: #555;
 }
 
-button{
+button {
   background-color: rgb(255, 162, 0);
   color: #fff;
   border-radius: 5px;
@@ -142,15 +135,29 @@ button{
   outline: none;
   padding: 8px 15px;
   cursor: pointer;
-
 }
 
-@media screen and (max-width: 800px){
-  .note-container{
+@media screen and (max-width: 800px) {
+  .container {
     flex-direction: column;
   }
+  .note-container {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: scroll;
+    flex-wrap: wrap;
+  }
+  form {
+    width: 100%;
+    margin: 0 auto;
+    height: fit-content;
+  }
+  .formClass {
+    width: 100%;
+    margin: 0 auto;
+  }
 
-  .note{
+  .note {
     width: 100%;
   }
 }
