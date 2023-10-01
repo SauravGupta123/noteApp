@@ -24,6 +24,7 @@ header{
 .container{
   display:flex;
   height:100vh;
+  background-color: #1d1f26;
   
 
   /* border-style: solid;
