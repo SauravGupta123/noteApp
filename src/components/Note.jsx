@@ -1,5 +1,6 @@
 import React from 'react'
 import DisplayNote from './DisplayNote';
+import Preview from './Preview';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { collection, getDocs, addDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
@@ -19,7 +20,7 @@ const Note = () => {
   useEffect(() => {
     const getNotes = async () => {
       const data = await getDocs(noteRef)
-      // console.log(data);
+      console.log(data);
       setNotes(data.docs.map((docs) => ({ ...docs.data(), id: docs.id })))
     }
     getNotes()
@@ -70,11 +71,15 @@ const Note = () => {
     const updatenote = doc(db, "note", id)
     await updateDoc(updatenote, addNote)
 
+
   alert("Updated SuccessFully");
+  
   }
 
   return (
     <div className="container ">
+
+     
      
       <div className='note-container'>
         {notes && notes.map((note) => (

@@ -8,6 +8,7 @@ const DisplayNote = (props) => {
 
   const handleUpdate = (note) =>{
     props.getUpdateNoteId(note)
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 
