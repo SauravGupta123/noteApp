@@ -18,7 +18,7 @@ const Note = () => {
 
   const noteRef = collection(db, "note")
 
-  useEffect(() => {
+  useEffect(() => {+
     const getNotes = async () => {
       const data = await getDocs(noteRef)
       // console.log(data);
@@ -43,8 +43,8 @@ const Note = () => {
       await addDoc(noteRef, addNote);
       // Clear the form after successful submission
       setAddNote({ title: "", content: "" });
-      window.location.reload();
       alert("Updated SuccessFully");
+      window.location.reload();
     } catch (error) {
       console.error("Error adding note:", error);
     } finally {
@@ -56,9 +56,9 @@ const Note = () => {
   const deleteNote = async (id) => {
     // console.log(id);
     const deletenote = doc(noteRef, id)
-    await deleteDoc(deletenote)
     alert("Deleted SuccessFully");
-    window.location.reload();
+    await deleteDoc(deletenote)
+    // window.location.reload();
 
   }
 

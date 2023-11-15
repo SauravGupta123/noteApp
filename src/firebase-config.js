@@ -4,6 +4,8 @@ import {getFirestore,connectFirestoreEmulator} from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 
 
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyDQtQWla2JgBIKsD8lzcR-S7dfz39WPcKo",
   authDomain: "notesapp-e7fa2.firebaseapp.com",
